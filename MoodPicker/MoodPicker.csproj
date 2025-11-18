@@ -90,6 +90,21 @@
     <Compile Include="Mode1_EachMode.Designer.cs">
       <DependentUpon>Mode1_EachMode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Start.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mode1_ChooseMode.resx">
+      <DependentUpon>Mode1_ChooseMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mode1_EachMode.resx">
+      <DependentUpon>Mode1_EachMode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -101,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

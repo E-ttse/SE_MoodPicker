@@ -12,9 +12,22 @@ namespace MoodPicker
 {
     public partial class MainPage: UserControl
     {
+        public event Action Switch_to_Mode1;
+        public event Action Switch_to_Mode2;
+        
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Switch_to_Mode1?.Invoke();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Switch_to_Mode2?.Invoke();
         }
     }
 }
