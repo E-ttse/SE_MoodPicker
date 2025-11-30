@@ -47,6 +47,10 @@ namespace MoodPicker
                     CurrentMood = new Mode1_Angry();
                     label2.Text = $"{CurrentMood.Name} #-_-";
                     break;
+                default:
+                    CurrentMood = new Mode1_Happy();
+                    label2.Text = $"{CurrentMood.Name} :D";
+                    break;
             }
 
             // Assign activities to cards
