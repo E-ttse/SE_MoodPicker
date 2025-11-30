@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new MoodPicker.Mode1_Card();
+            this.pictureBox2 = new MoodPicker.Mode1_Card();
+            this.pictureBox3 = new MoodPicker.Mode1_Card();
+            this.pictureBox4 = new MoodPicker.Mode1_Card();
             this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -134,10 +134,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private MoodPicker.Mode1_Card pictureBox1;
+        private MoodPicker.Mode1_Card pictureBox2;
+        private MoodPicker.Mode1_Card pictureBox3;
+        private MoodPicker.Mode1_Card pictureBox4;
         private System.Windows.Forms.Button button5;
     }
 }

@@ -30,11 +30,17 @@ namespace MoodPicker
         }
     }
 
-    public class Mode1_Card
+    public class Mode1_Card : System.Windows.Forms.PictureBox
     {
         public int Position { get; set; }
         public Mode1_Activity Activity { get; set; }
         public bool IsRevealed { get; private set; }
+
+        public Mode1_Card()
+        {
+            // Parameterless constructor for Designer support
+            IsRevealed = false;
+        }
 
         public Mode1_Card(int position, Mode1_Activity activity)
         {

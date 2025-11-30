@@ -1,1 +1,14 @@
 c:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.csproj.AssemblyReference.cache
+C:\Mode1_Activity\MoodPicker\bin\Debug\MoodPicker.exe.config
+C:\Mode1_Activity\MoodPicker\bin\Debug\MoodPicker.exe
+C:\Mode1_Activity\MoodPicker\bin\Debug\MoodPicker.pdb
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.MainForm.resources
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.Mode1_ChooseMode.resources
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.Mode1_EachMode.resources
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.Properties.Resources.resources
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.MainPage.resources
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.Start.resources
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.csproj.GenerateResource.cache
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.csproj.CoreCompileInputs.cache
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.exe
+C:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.pdb

@@ -48,6 +48,28 @@ namespace MoodPicker
                     label2.Text = $"{CurrentMood.Name} #-_-";
                     break;
             }
+
+            // Assign activities to cards
+            var activities = CurrentMood.GetShuffledActivities();
+            var cards = new[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4 };
+
+            for (int i = 0; i < cards.Length; i++)
+            {
+                if (i < activities.Count)
+                {
+                    cards[i].Activity = activities[i];
+                    cards[i].Click -= Card_Click; // Prevent double subscription
+                    cards[i].Click += Card_Click;
+                }
+            }
+        }
+
+        private void Card_Click(object sender, EventArgs e)
+        {
+            if (sender is Mode1_Card card && card.Activity != null)
+            {
+                MessageBox.Show($"Suggested Activity: {card.Activity.Name}", "Activity Revealed");
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
