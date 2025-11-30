@@ -134,5 +134,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bookstore.jpg" />
+    <Content Include="card_back.jpg" />
+    <Content Include="cleaning.jpg" />
+    <Content Include="cooking.jpg" />
+    <Content Include="cycling.jpg" />
+    <Content Include="dairy.jpg" />
+    <Content Include="dessert.jpg" />
+    <Content Include="exotic_food.jpg" />
+    <Content Include="gaming.jpg" />
+    <Content Include="hot_cocoa.jpg" />
+    <Content Include="instant_noodles.jpg" />
+    <Content Include="jogging.jpg" />
+    <Content Include="movie.jpg" />
+    <Content Include="pizza.jpg" />
+    <Content Include="running.jpg" />
+    <Content Include="sushi.jpg" />
+    <Content Include="workout.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

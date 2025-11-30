@@ -57,8 +57,37 @@ namespace MoodPicker
             var activities = CurrentMood.GetShuffledActivities();
             var cards = new[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4 };
 
+            // Path to card back image
+            string cardBackPath = System.IO.Path.Combine(Application.StartupPath, "..", "..", "Image", "card_back.jpg");
+            Image cardBackImage = null;
+
+            if (System.IO.File.Exists(cardBackPath))
+            {
+                try
+                {
+                    cardBackImage = Image.FromFile(cardBackPath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error loading card back: {ex.Message}");
+                }
+            }
+
             for (int i = 0; i < cards.Length; i++)
             {
+                // Reset card state
+                if (cardBackImage != null)
+                {
+                    cards[i].Image = (Image)cardBackImage.Clone(); // Clone to avoid sharing issues if disposed
+                    cards[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                else
+                {
+                    cards[i].Image = null;
+                }
+                
+                cards[i].Cover();
+
                 if (i < activities.Count)
                 {
                     cards[i].Activity = activities[i];
@@ -72,6 +101,10 @@ namespace MoodPicker
         {
             if (sender is Mode1_Card card && card.Activity != null)
             {
+                // Simulate execution trace
+                System.Diagnostics.Debug.WriteLine($"[Card_Click] Card clicked at position {card.Position}");
+                System.Diagnostics.Debug.WriteLine($"[Card_Click] Activity: {card.Activity.Name}");
+
                 // Try to load image
                 if (!string.IsNullOrEmpty(card.Activity.ImagePath) && System.IO.File.Exists(card.Activity.ImagePath))
                 {
@@ -79,6 +112,7 @@ namespace MoodPicker
                     {
                         card.Image = Image.FromFile(card.Activity.ImagePath);
                         card.SizeMode = PictureBoxSizeMode.StretchImage; // Fit image to box
+                        System.Diagnostics.Debug.WriteLine($"[Card_Click] Image loaded from {card.Activity.ImagePath}");
                     }
                     catch (Exception ex)
                     {
@@ -91,6 +125,7 @@ namespace MoodPicker
                 {
                     // File doesn't exist or path empty
                     CreatePlaceholderImage(card);
+                    System.Diagnostics.Debug.WriteLine($"[Card_Click] Image not found, using placeholder.");
                 }
 
                 MessageBox.Show($"Suggested Activity: {card.Activity.Name}", "Activity Revealed");
