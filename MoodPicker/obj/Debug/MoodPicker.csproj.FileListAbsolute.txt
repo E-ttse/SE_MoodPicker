@@ -1,0 +1,1 @@
+c:\Mode1_Activity\MoodPicker\obj\Debug\MoodPicker.csproj.AssemblyReference.cache

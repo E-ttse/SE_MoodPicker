@@ -22,6 +22,8 @@ namespace MoodPicker
             InitializeComponent();
         }
 
+        public Mode1_Mood CurrentMood { get; private set; }
+
         // 看收到哪個mood就顯示哪個mood的畫面
         public void SetMood(int moodId)
         {
@@ -30,16 +32,20 @@ namespace MoodPicker
             switch (moodId)
             {
                 case 0:
-                    label2.Text = "Happy :D";
+                    CurrentMood = new Mode1_Happy();
+                    label2.Text = $"{CurrentMood.Name} :D";
                     break;
                 case 1:
-                    label2.Text = "Boring :|";
+                    CurrentMood = new Mode1_Boring();
+                    label2.Text = $"{CurrentMood.Name} :|";
                     break;
                 case 2:
-                    label2.Text = "Bad :(";
+                    CurrentMood = new Mode1_Bad();
+                    label2.Text = $"{CurrentMood.Name} :(";
                     break;
                 case 3:
-                    label2.Text = "Angry #-_-";
+                    CurrentMood = new Mode1_Angry();
+                    label2.Text = $"{CurrentMood.Name} #-_-";
                     break;
             }
         }
