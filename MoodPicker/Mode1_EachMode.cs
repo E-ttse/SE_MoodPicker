@@ -72,8 +72,48 @@ namespace MoodPicker
         {
             if (sender is Mode1_Card card && card.Activity != null)
             {
+                // Try to load image
+                if (!string.IsNullOrEmpty(card.Activity.ImagePath) && System.IO.File.Exists(card.Activity.ImagePath))
+                {
+                    try
+                    {
+                        card.Image = Image.FromFile(card.Activity.ImagePath);
+                        card.SizeMode = PictureBoxSizeMode.StretchImage; // Fit image to box
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error loading image: {ex.Message}");
+                        // Fallback if load fails
+                        CreatePlaceholderImage(card);
+                    }
+                }
+                else
+                {
+                    // File doesn't exist or path empty
+                    CreatePlaceholderImage(card);
+                }
+
                 MessageBox.Show($"Suggested Activity: {card.Activity.Name}", "Activity Revealed");
             }
+        }
+
+        private void CreatePlaceholderImage(Mode1_Card card)
+        {
+            // Create a simple bitmap with the activity name
+            Bitmap bmp = new Bitmap(card.Width, card.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
+            {
+                g.Clear(Color.LightBlue);
+                using (Font font = new Font("Arial", 12))
+                using (Brush brush = new SolidBrush(Color.Black))
+                {
+                    SizeF textSize = g.MeasureString(card.Activity.Name, font);
+                    float x = (card.Width - textSize.Width) / 2;
+                    float y = (card.Height - textSize.Height) / 2;
+                    g.DrawString(card.Activity.Name, font, brush, x, y);
+                }
+            }
+            card.Image = bmp;
         }
 
         private void button5_Click(object sender, EventArgs e)
