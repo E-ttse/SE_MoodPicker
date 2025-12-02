@@ -118,7 +118,7 @@ namespace MoodPicker
         public Mode1_Bad() : base("Bad")
         {
             Activities.Add(new Mode1_Activity("慢跑", "", "Images/jogging.jpg"));
-            Activities.Add(new Mode1_Activity("寫日記", "", "Images/diary.jpg"));
+            Activities.Add(new Mode1_Activity("寫日記", "", "Images/dairy.jpg"));
             Activities.Add(new Mode1_Activity("喝熱可可", "", "Images/hot_cocoa.jpg"));
             Activities.Add(new Mode1_Activity("吃泡麵", "", "Images/instant_noodles.jpg"));
         }

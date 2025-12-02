@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Mode1_Activity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{282F3517-52E9-4550-89F2-163C016B0BCB}|MoodPicker\\MoodPicker.csproj|c:\\mode1_activity\\moodpicker\\mode1_eachmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{282F3517-52E9-4550-89F2-163C016B0BCB}|MoodPicker\\MoodPicker.csproj|c:\\mode1_activity\\moodpicker\\mode1_models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{282F3517-52E9-4550-89F2-163C016B0BCB}|MoodPicker\\MoodPicker.csproj|solutionrelative:moodpicker\\mode1_models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{282F3517-52E9-4550-89F2-163C016B0BCB}|MoodPicker\\MoodPicker.csproj|C:\\Mode1_Activity\\moodpicker\\mode1_eachmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{282F3517-52E9-4550-89F2-163C016B0BCB}|MoodPicker\\MoodPicker.csproj|solutionrelative:moodpicker\\mode1_eachmode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -25,16 +29,32 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Mode1_Models.cs",
+              "DocumentMoniker": "C:\\Mode1_Activity\\MoodPicker\\Mode1_Models.cs",
+              "RelativeDocumentMoniker": "MoodPicker\\Mode1_Models.cs",
+              "ToolTip": "C:\\Mode1_Activity\\MoodPicker\\Mode1_Models.cs",
+              "RelativeToolTip": "MoodPicker\\Mode1_Models.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAcwAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-02T10:32:43.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Mode1_EachMode.cs [\u8A2D\u8A08]",
               "DocumentMoniker": "C:\\Mode1_Activity\\MoodPicker\\Mode1_EachMode.cs",
               "RelativeDocumentMoniker": "MoodPicker\\Mode1_EachMode.cs",
               "ToolTip": "C:\\Mode1_Activity\\MoodPicker\\Mode1_EachMode.cs [\u8A2D\u8A08]",
               "RelativeToolTip": "MoodPicker\\Mode1_EachMode.cs [\u8A2D\u8A08]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T09:01:18.957Z",
-              "EditorCaption": " [\u8A2D\u8A08]"
+              "WhenOpened": "2025-11-30T09:01:18.957Z"
             }
           ]
         }

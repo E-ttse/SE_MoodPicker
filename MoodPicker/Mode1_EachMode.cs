@@ -58,7 +58,7 @@ namespace MoodPicker
             var cards = new[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4 };
 
             // Path to card back image
-            string cardBackPath = System.IO.Path.Combine(Application.StartupPath, "..", "..", "Image", "card_back.jpg");
+            string cardBackPath = System.IO.Path.Combine(Application.StartupPath, "Images", "card_back.jpg");
             Image cardBackImage = null;
 
             if (System.IO.File.Exists(cardBackPath))
