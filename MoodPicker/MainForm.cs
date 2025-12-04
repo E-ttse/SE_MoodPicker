@@ -18,13 +18,15 @@ namespace MoodPicker
         private Mode1_ChooseMode mode1_choose_mode;
         private Mode1_EachMode mode1_each_mode;
         private Mode2_AddList mode2_add_list;
+        private Mode2_ChooseRandom mode2_choose_random;
+        private Mode2_Result mode2_result;
 
         public MainForm()
         {
             InitializeComponent();
             //設定視窗起始位置
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.WindowState = FormWindowState.Maximized;
+            // this.WindowState = FormWindowState.Maximized;
             panel1.Dock = DockStyle.Fill;
 
             // 初始化各視窗
@@ -33,6 +35,8 @@ namespace MoodPicker
             mode1_choose_mode = new Mode1_ChooseMode();
             mode1_each_mode = new Mode1_EachMode();
             mode2_add_list = new Mode2_AddList();
+            mode2_choose_random = new Mode2_ChooseRandom();
+            mode2_result = new Mode2_Result();
 
             // 監測各頁面的invoke，觸發後切換頁面
             start.Switch_to_MainPage += () => ShowControl(mainpage);
@@ -50,6 +54,13 @@ namespace MoodPicker
 
             mode1_each_mode.Switch_to_MainPage += () => ShowControl(mainpage);
 
+            mode2_add_list.Switch_to_MainPage += () => ShowControl(mainpage);
+            mode2_add_list.Switch_to_ChooseRandom += () => ShowControl(mode2_choose_random);
+
+            mode2_choose_random.Switch_to_MainPage += () => ShowControl(mainpage);
+            mode2_choose_random.Switch_to_Result += () => ShowControl(mode2_result);
+
+            mode2_result.Switch_to_MainPage += () => ShowControl(mainpage);
             // 顯示初始視窗 - Start
             ShowControl(start);
         }
