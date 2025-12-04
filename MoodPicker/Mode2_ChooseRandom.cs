@@ -13,7 +13,10 @@ namespace MoodPicker
     public partial class Mode2_ChooseRandom: UserControl
     {
         public event Action Switch_to_Result;
-        public event Action Switch_to_MainPage;
+        public event Action Switch_to_AddList;
+        public event Action<string, List<string>> Switch_to_CoinScreen;
+        public event Action<string, List<string>> Switch_to_DiceScreen;
+        public event Action<string, List<string>> Switch_to_SpinWheelScreen;
 
         private string listName;             // The list that be selected
         private List<string> itemList;           // Items of the list
@@ -22,21 +25,19 @@ namespace MoodPicker
         public Mode2_ChooseRandom()
         {
             InitializeComponent();
-        }
 
-        // selected list and its items
-        public Mode2_ChooseRandom(string selectedList, List<string> selectedItems)
-        {
-            InitializeComponent();
-
-            listName = selectedList;
-            itemList = selectedItems;
-                        
             // drawing style
             treeView1.DrawMode = TreeViewDrawMode.OwnerDrawText;
             treeView1.DrawNode += treeView1_DrawNode;
             treeView1.ItemHeight = 28;
+        }
 
+        public void SetData(string selectedList, List<string> selectedItems)
+        {
+            this.listName = selectedList;
+            this.itemList = selectedItems;
+
+            // 接收到資料後，立即呼叫方法更新 UI 顯示
             DisplayListItems();
         }
 
@@ -84,7 +85,7 @@ namespace MoodPicker
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Switch_to_Result?.Invoke();
+            Switch_to_SpinWheelScreen?.Invoke(listName, itemList);
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -94,7 +95,7 @@ namespace MoodPicker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Switch_to_MainPage?.Invoke();
+            Switch_to_AddList?.Invoke();
         }
 
         private void Mode2_ChooseRandom_Load(object sender, EventArgs e)
@@ -104,18 +105,13 @@ namespace MoodPicker
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Switch_to_Result?.Invoke();
+            Switch_to_DiceScreen?.Invoke(listName, itemList);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Switch_to_Result?.Invoke();
+            Switch_to_CoinScreen?.Invoke(listName, itemList);
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Switch_to_MainPage?.Invoke();
-
-        }
     }
 }

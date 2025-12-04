@@ -14,13 +14,13 @@ namespace MoodPicker
 {
     public partial class Mode2_AddList: UserControl
     {
-        public event Action Switch_to_ChooseRandom;
+        public event Action<string, List<string>> Switch_to_ChooseRandom;
         public event Action Switch_to_MainPage;
 
         public Mode2_AddList()
         {
             InitializeComponent();
-            string filePath = "D:\\uesr\\Desktop\\大學課程\\大三上\\軟體工程\\Final\\SE_MoodPicker-Mode1_waterfall_cont\\MoodPicker\\list.txt";
+            string filePath = "D:\\下載(C)\\SE_MoodPicker-Mode1_waterfall\\MoodPicker\\list.txt";
             LoadTreeViewFromTextFile(filePath);
 
             // 顯示調整
@@ -37,7 +37,7 @@ namespace MoodPicker
 
         private void Mode2_AddList_Load(object sender, EventArgs e)
         {
-            string filePath = "D:\\uesr\\Desktop\\大學課程\\大三上\\軟體工程\\Final\\SE_MoodPicker-Mode1_waterfall_cont\\MoodPicker\\list.txt";
+            string filePath = "D:\\下載(C)\\SE_MoodPicker-Mode1_waterfall\\MoodPicker\\list.txt";
             LoadTreeViewFromTextFile(filePath);
 
             // AfterSelect 事件綁定 (+=)
@@ -94,7 +94,7 @@ namespace MoodPicker
                 }
 
                 // 展開所有節點
-                treeView1.ExpandAll();
+                //treeView1.ExpandAll();
             }
             catch (FileNotFoundException)
             {
@@ -157,21 +157,25 @@ namespace MoodPicker
                 return;
             }
             // 收集子項
+
             List<string> items = new List<string>();
             foreach (TreeNode child in selected.Nodes)
             {
                 items.Add(child.Text);
             }
 
+            string selectedText = treeView1.SelectedNode.Text;
+            Switch_to_ChooseRandom?.Invoke(selectedText, items);
+
             // 跳到Mode2_ChooseRandom 傳入資料
-            Mode2_ChooseRandom nextPage = new Mode2_ChooseRandom(selected.Text, items);
+            /*Mode2_ChooseRandom nextPage = new Mode2_ChooseRandom(selected.Text, items);
             Form parentForm = this.FindForm();
             if (parentForm != null)
             {
                 parentForm.Controls.Clear();
                 nextPage.Dock = DockStyle.Fill;
                 parentForm.Controls.Add(nextPage);
-            }
+            }*/
         }
     }
 }

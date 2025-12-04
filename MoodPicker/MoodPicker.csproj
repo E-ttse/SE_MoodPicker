@@ -65,11 +65,23 @@
     <Compile Include="Mode2_ChooseRandom.Designer.cs">
       <DependentUpon>Mode2_ChooseRandom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mode2_DiceScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mode2_DiceScreen.Designer.cs">
+      <DependentUpon>Mode2_DiceScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mode2_Result.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Mode2_Result.Designer.cs">
       <DependentUpon>Mode2_Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mode2_SpinWheelScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mode2_SpinWheelScreen.Designer.cs">
+      <DependentUpon>Mode2_SpinWheelScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,11 +103,23 @@
     <Compile Include="Mode1_EachMode.Designer.cs">
       <DependentUpon>Mode1_EachMode.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpinWheelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpinWheelControl.Designer.cs">
+      <DependentUpon>SpinWheelControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Start.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mode2_CoinScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mode2_CoinScreen.Designer.cs">
+      <DependentUpon>Mode2_CoinScreen.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -112,8 +136,17 @@
     <EmbeddedResource Include="Mode2_ChooseRandom.resx">
       <DependentUpon>Mode2_ChooseRandom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mode2_CoinScreen.resx">
+      <DependentUpon>Mode2_CoinScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mode2_DiceScreen.resx">
+      <DependentUpon>Mode2_DiceScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mode2_Result.resx">
       <DependentUpon>Mode2_Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mode2_SpinWheelScreen.resx">
+      <DependentUpon>Mode2_SpinWheelScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -126,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpinWheelControl.resx">
+      <DependentUpon>SpinWheelControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
@@ -196,6 +232,7 @@
     <Content Include="Images\workout.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="list.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
